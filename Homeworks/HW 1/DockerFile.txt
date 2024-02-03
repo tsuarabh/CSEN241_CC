@@ -1,0 +1,19 @@
+FROM tsaurabh21/ubuntu_docker
+
+COPY script_dock.sh C:/Users/tsaurabh/Downloads/script_dock.sh
+
+COPY C:\Users\tsaur\OneDrive\Desktop\CSEN241_CC\Homeworks\HW 1\test1.sh
+
+COPY C:\Users\tsaur\OneDrive\Desktop\CSEN241_CC\Homeworks\HW 1\test2.sh
+
+COPY C:\Users\tsaur\OneDrive\Desktop\CSEN241_CC\Homeworks\HW 1\test3.sh
+
+RUN chmod +x script_dock.sh
+
+RUN chmod +x test1.sh
+
+RUN chmod +x test2.sh
+
+RUN chmod +x test3.sh
+
+ENTRYPOINT bash script_dock.sh
